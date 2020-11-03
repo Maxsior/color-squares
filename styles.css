@@ -1,0 +1,64 @@
+:root {
+    --game-size: 232px;
+    --card-size: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 32px;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin: auto;
+    flex: 1 0 auto;
+
+
+    width: var(--game-size);
+    height: var(--game-size);
+}
+
+.square {
+    width: var(--card-size);
+    height: var(--card-size);
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+}
+
+.square:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2px white;
+}
+
+#popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #aa0000;
+    color: white;
+    top: -100px;
+    transition: top 0.2s ease-in-out;
+}
+
+#info {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+#info span {
+    font-weight: bold;
+}
