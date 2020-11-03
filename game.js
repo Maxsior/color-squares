@@ -85,7 +85,7 @@ function stopGame(force=true) {
 
 function startGame() {
   const level = +localStorage.getItem('level') || 1;
-  const time = +localStorage.getItem('time') || 3 * 60;
+  const time = +localStorage.getItem('time') || 60;
   startLevel(level);
   startTimer(time);
 }
