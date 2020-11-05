@@ -1,6 +1,6 @@
 :root {
-    --game-size: 232px;
     --card-size: 100px;
+    --level: 1;
 }
 
 body {
@@ -13,18 +13,14 @@ body {
 }
 
 #game {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(calc(var(--level) + 1), 1fr);
+    grid-template-columns: repeat(calc(var(--level) + 1), 1fr);
     justify-content: center;
     align-content: center;
     align-items: center;
     box-sizing: border-box;
-    flex-wrap: wrap;
     margin: auto;
-    flex: 1 0 auto;
-
-
-    width: var(--game-size);
-    height: var(--game-size);
 }
 
 .square {
